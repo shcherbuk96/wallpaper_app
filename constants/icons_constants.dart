@@ -1,11 +1,10 @@
-const String back_icon = "assets/icons/back.svg";
-const String camera_icon = "assets/icons/camera.svg";
 const String chat_icon = "assets/icons/chat.svg";
-const String edit_icon = "assets/icons/edit.svg";
+const String back_icon = "";
+const String camera_icon = "assets/icons/camera.svg";
+const String edit_icon = "";
 const String explore_icon = "assets/icons/explore.svg";
 const String pinterest_icon = "assets/icons/pinterest.svg";
 const String pinterest_select_icon = "assets/icons/pinterest_select.svg";
 const String profile_icon = "assets/icons/profile.svg";
 const String search_icon = "assets/icons/search.svg";
-const String share_icon = "assets/icons/share.svg";
-const String more_icon = "assets/icons/more.svg";
+const String share_icon = "";

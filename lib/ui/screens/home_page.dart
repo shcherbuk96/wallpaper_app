@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wallpaper_app/constants/colors_constants.dart';
 import 'package:wallpaper_app/constants/icons_constants.dart';
 import 'package:wallpaper_app/convertFromHex.dart';
+import 'package:wallpaper_app/ui/widgets/grid_widget.dart';
 import 'package:wallpaper_app/ui/widgets/search_field.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,6 +24,7 @@ class _HomePageState extends State<HomePage> {
         body: Column(
           children: [
             SearchField(),
+            WallpapersGrid(),
           ],
         ),
       ),
@@ -41,20 +44,20 @@ class _HomePageState extends State<HomePage> {
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
-              icon: Image.asset(pinterest_icon),
-              activeIcon: Image.asset(pinterest_select_icon),
+              icon: SvgPicture.asset(pinterest_icon),
+              activeIcon: SvgPicture.asset(pinterest_select_icon),
               title: Text("Pinterest"),
               backgroundColor: colorFromHex(black)),
           BottomNavigationBarItem(
-              icon: Image.asset(explore_icon),
+              icon: SvgPicture.asset(explore_icon),
               title: Text("Explore"),
               backgroundColor: colorFromHex(black)),
           BottomNavigationBarItem(
-              icon: Image.asset(chat_icon),
+              icon: SvgPicture.asset(chat_icon),
               title: Text("Chat"),
               backgroundColor: colorFromHex(black)),
           BottomNavigationBarItem(
-              icon: Image.asset(profile_icon),
+              icon: SvgPicture.asset(profile_icon),
               title: Text("Profile"),
               backgroundColor: colorFromHex(black)),
         ]);

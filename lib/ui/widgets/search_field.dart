@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:wallpaper_app/constants/colors_constants.dart';
 import 'package:wallpaper_app/constants/fonts_constants.dart';
 import 'package:wallpaper_app/constants/icons_constants.dart';
@@ -24,7 +25,9 @@ class _SearchFieldState extends State<SearchField> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
-              child: Image.asset(camera_icon),
+              child: SvgPicture.asset(
+                camera_icon,
+              ),
             ),
           ],
         ),
@@ -38,13 +41,14 @@ class _SearchFieldState extends State<SearchField> {
       autofocus: false,
       style: TextStyle(
           color: colorFromHex(white).withOpacity(0.4),
-          fontSize: 18,
+          fontSize: 14,
           fontFamily: helveticaNeueCyrBold),
       decoration: InputDecoration(
-        prefixIcon: Image.asset(
-          search_icon,
-          color: colorFromHex(white).withOpacity(0.4),
-          height: 15,
+        prefixIcon: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SvgPicture.asset(
+            search_icon,
+          ),
         ),
         filled: true,
         fillColor: colorFromHex(white).withOpacity(0.1),
