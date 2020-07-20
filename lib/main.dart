@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wallpaper_app/constants/colors_constants.dart';
+import 'package:wallpaper_app/constants/branding_colors.dart';
 import 'package:wallpaper_app/data/service_locator.dart';
-import 'package:wallpaper_app/ui/screens/home_page.dart';
+import 'package:wallpaper_app/ui/screens/home_page/home_page.dart';
 
 import 'convertFromHex.dart';
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: colorFromHex(black),
+        primaryColor: colorFromHex(BrandingColors.black),
       ),
       home: HomePage(),
     );

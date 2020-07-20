@@ -1,1 +1,3 @@
-const String helveticaNeueCyrBold = "HelveticaNeueCyr-Bold";
+class FontsFamily {
+  static const String helveticaNeueCyrBold = "HelveticaNeueCyr-Bold";
+}

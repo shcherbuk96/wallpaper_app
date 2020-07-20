@@ -11,7 +11,7 @@ class LoadingState extends HomePageState {}
 
 class ErrorState extends HomePageState {}
 
-class BusyState extends HomePageState {}
+class ShowUIState extends HomePageState {}
 
 abstract class HomePageEvent {
   const HomePageEvent();
@@ -35,15 +35,9 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
     if (event is PopularsEvent) {
       yield LoadingState();
       wallpapers = await client
-          .getPopularImages(api_key, "popular", "vertical")
+          .getPopularImages(ApiConstants.api_key, "popular", "vertical")
           .then((value) => value.body.hits);
-      yield BusyState();
+      yield ShowUIState();
     }
-  }
-
-  Future init() async {
-    // wallpapers = await client
-    //     .getPopularImages("popular")
-    //     .then((value) => value.body.hits);
   }
 }

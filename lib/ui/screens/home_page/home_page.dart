@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:wallpaper_app/constants/colors_constants.dart';
-import 'package:wallpaper_app/constants/icons_constants.dart';
+import 'package:wallpaper_app/constants/assets.dart';
+import 'package:wallpaper_app/constants/branding_colors.dart';
 import 'package:wallpaper_app/convertFromHex.dart';
 import 'package:wallpaper_app/ui/widgets/grid_widget.dart';
 import 'package:wallpaper_app/ui/widgets/search_field.dart';
@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: colorFromHex(black),
+        backgroundColor: colorFromHex(BrandingColors.black),
         bottomNavigationBar: _bottomNavBar(),
         body: Column(
           children: [
@@ -44,22 +44,22 @@ class _HomePageState extends State<HomePage> {
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
-              icon: SvgPicture.asset(pinterest_icon),
-              activeIcon: SvgPicture.asset(pinterest_select_icon),
+              icon: SvgPicture.asset(Assets.pinterest_icon),
+              activeIcon: SvgPicture.asset(Assets.pinterest_select_icon),
               title: Text("Pinterest"),
-              backgroundColor: colorFromHex(black)),
+              backgroundColor: colorFromHex(BrandingColors.black)),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset(explore_icon),
+              icon: SvgPicture.asset(Assets.explore_icon),
               title: Text("Explore"),
-              backgroundColor: colorFromHex(black)),
+              backgroundColor: colorFromHex(BrandingColors.black)),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset(chat_icon),
+              icon: SvgPicture.asset(Assets.chat_icon),
               title: Text("Chat"),
-              backgroundColor: colorFromHex(black)),
+              backgroundColor: colorFromHex(BrandingColors.black)),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset(profile_icon),
+              icon: SvgPicture.asset(Assets.profile_icon),
               title: Text("Profile"),
-              backgroundColor: colorFromHex(black)),
+              backgroundColor: colorFromHex(BrandingColors.black)),
         ]);
   }
 }
